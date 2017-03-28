@@ -54,6 +54,7 @@ install_swift() {
 build_failed() {
   { echo "Building Swift failed"
     echo "Check out the logfile for more information: $LOG_PATH"
+    cat $LOG_PATH
     echo "You can inspect or delete the working tree at: $TMP"
     rm -fr "$destination"
   } >&2
